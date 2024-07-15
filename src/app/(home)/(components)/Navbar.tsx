@@ -3,16 +3,16 @@ import React from 'react'
 import { MdFavoriteBorder } from "react-icons/md";
 import { CiShoppingCart } from "react-icons/ci";
 import { CgDetailsMore } from "react-icons/cg";
-import { Pacifico } from 'next/font/google';
+
 import { cn } from '@/lib/utils';
-const pacifico = Pacifico({ subsets: ['latin'], weight: '400' });
+
 const Navbar = () => {
     return (
         <nav className='py-6'>
             <section className='flex items-center justify-between'>
                 <div>
                     {/* logo */}
-                    <Link href={'/'} className={cn('font-bold text-4xl text-yellow-700',pacifico.className)}>Cocoa</Link>
+                    <Link href={'/'} className='font-bold text-4xl text-yellow-700 font-pacifico'>Cocoa</Link>
                 </div>
                 <div >
                     {/* menuItem */}

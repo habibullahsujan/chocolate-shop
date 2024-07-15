@@ -1,21 +1,27 @@
-'use client'
-import Navbar from "./(components)/Navbar";
-import Header from "./(components)/Header";
-import { useEffect, useState } from "react";
-import Image1 from '@/assets/images/image-1.webp'
+
+import AboutUs from "./(components)/AboutUs";
+import Banner from "./(components)/Banner";
+import BestSellers from "./(components)/BestSellers";
+import CakesAndSweets from "./(components)/CakesAndSweets";
+import ClientTestimonials from "./(components)/ClientTestimonials";
+import Footer from "./(components)/Footer";
+import SpecialGallery from "./(components)/SpecialGallery";
+import WhatMakesUsSpecial from "./(components)/WhatMakesUsSpecial";
+
 
 
 export default function Home() {
-  const [selectImage, setSelectImage] = useState({});
-  useEffect(() => {
-    setSelectImage(Image1)
-  }, [])
+
   return (
     <main>
-      <section className="px-16 header-section h-screen transition-all" style={{ backgroundImage: `url(${selectImage?.src})`, backgroundSize: 'cover' }}>
-        <Navbar />
-        <Header selectImage={selectImage} setSelectImage={setSelectImage} />
-      </section>
+      <Banner />
+      <AboutUs />
+      <CakesAndSweets />
+      <BestSellers />
+      <WhatMakesUsSpecial />
+      <ClientTestimonials />
+      <SpecialGallery />
+      <Footer />
     </main>
   );
 }
