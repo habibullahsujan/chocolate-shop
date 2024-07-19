@@ -5,7 +5,7 @@ import image3 from '@/assets/images/best-seller-3.webp'
 import image4 from '@/assets/images/best-seller-4.webp'
 import image5 from '@/assets/images/best-seller-5.webp'
 import image6 from '@/assets/images/best-seller-6.webp'
-import Slider from './Slider'
+import SliderComp from './Slider'
 
 
 
@@ -21,12 +21,12 @@ const BestSellers = () => {
         { title: '', img: image6, price: '600' },
     ]
     return (
-        <section className='px-16 my-24'>
+        <section className='px-4 md:px-16 my-24'>
 
             <h1 className='pb-8 font-bold text-4xl font-pacifico text-yellow-700'>Best Sellers</h1>
 
 
-            <Slider bestSellers={bestSellers}/>
+            <SliderComp bestSellers={bestSellers}/>
 
         </section>
     )

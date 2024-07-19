@@ -12,10 +12,10 @@ const Header = ({ setSelectImage, selectImage }: { setSelectImage: React.Dispatc
     return (
         <div>
             <div className='flex flex-col items-start h-[55vh]'>
-                <h1 className='font-bold text-6xl text-yellow-700 flex flex-col items-start justify-end flex-1 gap-6 font-pacifico'><span>Special Chocolate</span> <span>For Special Occasions</span></h1>
+                <h1 className='font-bold text-3xl md:text-6xl text-yellow-700 flex flex-col items-start justify-end flex-1 gap-6 font-pacifico'><span>Special Chocolate</span> <span>For Special Occasions</span></h1>
                 <Button variant={'outline'} className='mt-10 border-white  hover:bg-yellow-700 hover:border-yellow-700 transition-all text-white '>Choose a choco</Button>
             </div>
-            <div className='flex gap-x-4 justify-end mt-14'>
+            <div className='md:flex gap-x-4 justify-end mt-14 hidden '>
                 <div className={`pb-1 ${selectImage.src === Image1?.src ? 'border-b-4 border-yellow-300' : ''}`}>
                     <button className={`border-8 border-white ${selectImage.src === Image1?.src ? 'border-yellow-300' : ''}`} onClick={() => setSelectImage(Image1)}>
                         <Image src={Image1} alt='chocolate' height={150} width={100} />

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 const WhatMakesUsSpecial = () => {
     return (
-        <section className='px-16 my-24'>
+        <section className='px-4 md:px-16 my-24'>
 
             <h2 className='pb-8 font-bold text-4xl font-pacifico text-yellow-700'>What makes us Special?</h2>
 
@@ -17,10 +17,10 @@ const WhatMakesUsSpecial = () => {
                     <Image src={BgImage} alt="special banner" fill />
                     <Button><FaPlayCircle size={80} className="text-white fill-yellow-800 absolute top-[45%] left-1/2 hover:fill-yellow-500 transition-all" /></Button>
                 </div>
-                <div className="col-span-6 flex">
+                <div className="col-span-12 md:col-span-6 flex">
                     <Image src={Image1} alt="special-2" className="flex-1" />
                 </div>
-                <div className="col-span-6 flex">
+                <div className="col-span-12 md:col-span-6 flex">
                     <Image src={Image2} alt="special-2" className="flex-1" />
                 </div>
             </div>

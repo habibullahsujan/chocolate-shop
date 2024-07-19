@@ -1,6 +1,6 @@
 
 import AboutUs from "./(components)/AboutUs";
-import Banner from "./(components)/Banner";
+import Banner from "./(components)/header/Banner";
 import BestSellers from "./(components)/BestSellers";
 import CakesAndSweets from "./(components)/CakesAndSweets";
 import ClientTestimonials from "./(components)/ClientTestimonials";

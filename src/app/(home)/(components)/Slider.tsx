@@ -4,25 +4,41 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 
 // import required modules
-import { FreeMode, Pagination, Navigation } from 'swiper/modules';
+import {  Pagination, Navigation } from 'swiper/modules';
 import BestSellerCard from './BestSellerCard';
 
 export default function Slider({ bestSellers }) {
     return (
         <>
             <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
+
+              slidesPerView={1}
+                spaceBetween={20}
                 freeMode={true}
                 pagination={{
                     clickable: true,
                 }}
+                breakpoints={{
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 40,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 50,
+                    },
+                  }}
                 navigation={true}
-                modules={[FreeMode, Pagination, Navigation]}
+                modules={[ Pagination, Navigation]}
                 className="mySwiper"
             >
 

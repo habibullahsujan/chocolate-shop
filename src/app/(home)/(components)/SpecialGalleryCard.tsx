@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { SearchIcon } from 'lucide-react'
 const SpecialGalleryCard = ({ item }) => {
     return (
-        <div className='cursor-pointer col-span-3 relative group' >
+        <div className='cursor-pointer col-span-6 md:col-span-3 relative group' >
             <div>
                 <Image alt='chocolate' src={item.img} />
             </div>

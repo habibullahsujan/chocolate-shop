@@ -14,7 +14,7 @@ import SpecialGalleryCard from './SpecialGalleryCard'
 const SpecialGallery = () => {
     const specialGallery = [{ img: Image1 }, { img: Image2 }, { img: Image3 }, { img: Image4 }, { img: Image5 }, { img: Image6 }, { img: Image7 }, { img: Image8 },]
     return (
-        <section className='px-16 my-24'>
+        <section className='px-4 md:px-16 my-24'>
 
             <h1 className='py-24 font-bold text-4xl font-pacifico text-yellow-700'>Our Special Gallery</h1>
 

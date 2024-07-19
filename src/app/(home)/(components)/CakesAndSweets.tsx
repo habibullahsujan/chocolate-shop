@@ -19,7 +19,7 @@ const cakesAndSweets = [
 
 const CakesAndSweets = () => {
   return (
-    <section className='px-16 py-8'>
+    <section className='px-4 md:px-16 py-8'>
       <h2 className='font-bold text-4xl text-yellow-700 font-pacifico '>Cakes & Sweets</h2>
       <div className='grid grid-cols-12 gap-4 pt-10'>
         {

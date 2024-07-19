@@ -12,7 +12,7 @@ type TCakesAndSweetsProps={
 const CakeAndSweetCard = ({ item }:{item:TCakesAndSweetsProps}) => {
     return (
 
-        <div className={`overflow-hidden ${item.span === 4 && 'col-span-4'} ${item.span === 8 && 'col-span-8'} relative`}>
+        <div className={`col-span-12 overflow-hidden ${item.span === 4 && 'md:col-span-4'} ${item.span === 8 && 'md:col-span-8'} relative`}>
             <motion.div whileHover={{ scale: 1.5, rotate: 10 }} initial={{ scale: 1 }}   transition={{ duration: 0.8, }} className={`cursor-pointer relative h-[400px] `}>
                 <Image src={item.img} alt='sweets' fill />
             </motion.div>
