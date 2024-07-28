@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,4 +10,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(220, 190, 121, 0.9);
+  right: 10px;
+  padding: 20px;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(232, 183, 70, 0.9);
 }

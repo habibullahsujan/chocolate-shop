@@ -1,7 +1,6 @@
 'use client'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -11,8 +10,13 @@ import 'swiper/css/navigation';
 // import required modules
 import {  Pagination, Navigation } from 'swiper/modules';
 import BestSellerCard from './BestSellerCard';
-
-export default function Slider({ bestSellers }) {
+import { StaticImageData } from 'next/image';
+type TBestSeller={
+  title: string,
+  img: StaticImageData,
+  price: string,
+}
+export default function Slider({ bestSellers }:{bestSellers:TBestSeller[]}) {
     return (
         <>
             <Swiper
@@ -46,7 +50,7 @@ export default function Slider({ bestSellers }) {
 
 
                     {
-                        bestSellers.map((item, index) => (<SwiperSlide key={index}><BestSellerCard item={item} /></SwiperSlide>))
+                        bestSellers.map((item:TBestSeller, index) => (<SwiperSlide key={index}><BestSellerCard item={item} /></SwiperSlide>))
                     }
                 </div>
             </Swiper>

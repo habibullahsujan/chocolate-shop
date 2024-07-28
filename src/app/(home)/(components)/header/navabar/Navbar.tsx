@@ -5,13 +5,16 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CgDetailsMore } from "react-icons/cg";
 
 import BrandedFoods from './BrandedFoods';
+import Chocolate from './Chocolate';
+import GIftBoxes from './GIftBoxes';
+import Pages from './Pages';
 
 const Navbar = () => {
 
     const [submenuOpen, setSubmenuOpen] = useState(false);
-    console.log(submenuOpen)
-    const handleMouseEnter = () => {
-
+    const [index, setIndex] = useState(1)
+    const handleMouseEnter = (index: number) => {
+        setIndex(index);
         setSubmenuOpen(true);
     };
 
@@ -29,13 +32,24 @@ const Navbar = () => {
                     {/* menuItem */}
                     <ul className='flex justify-between gap-x-12 text-white'>
                         <Link href={'/home'}><li>Home</li></Link>
-                        <button onMouseEnter={handleMouseEnter}
-                            className=' relative'><li>Branded Foods</li>
-                            {submenuOpen && <BrandedFoods handleMouseLeave={handleMouseLeave} />}
+                        <button onMouseEnter={() => handleMouseEnter(1)}
+
+                            className='relative'><li>Branded Foods</li>
+                            {submenuOpen && index === 1 && <BrandedFoods handleMouseLeave={handleMouseLeave} index={index} />}
                         </button>
-                        <Link href={'/home'}><li>Chocolate</li></Link>
-                        <Link href={'/home'}><li>Gift Boxes</li></Link>
-                        <Link href={'/home'}><li>Pages</li></Link>
+
+                        <button onMouseEnter={() => handleMouseEnter(2)}
+                            className=' relative'><li>Chocolate</li>
+                            {submenuOpen && index === 2 && <Chocolate handleMouseLeave={handleMouseLeave} index={index} />}
+                        </button>
+                        <button onMouseEnter={() => handleMouseEnter(3)}
+                            className=' relative'><li>Gift Boxes</li>
+                            {submenuOpen && index === 3 && <GIftBoxes handleMouseLeave={handleMouseLeave} index={index} />}
+                        </button>
+                        <button onMouseEnter={() => handleMouseEnter(4)}
+                            className=' relative'><li>Pages</li>
+                            {submenuOpen && index === 4 && <Pages handleMouseLeave={handleMouseLeave} index={index} />}
+                        </button>
                         <Link href={'/home'}><li>New Collection</li></Link>
                     </ul>
                 </div>

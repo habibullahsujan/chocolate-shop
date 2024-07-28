@@ -4,9 +4,13 @@ import Image1 from '@/assets/images/image-1.webp'
 import Navbar from './navabar/Navbar';
 import Header from './Header';
 import { motion } from 'framer-motion'
-
+interface Image {
+    src: string;
+    // Add other properties if necessary
+  }
 const Banner = () => {
-    const [selectImage, setSelectImage] = useState({});
+    const [selectImage, setSelectImage] = useState<Image | null>(null);
+    console.log(selectImage)
     useEffect(() => {
         setSelectImage(Image1)
     }, [])

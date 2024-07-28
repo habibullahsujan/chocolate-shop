@@ -1,7 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { SearchIcon } from 'lucide-react'
-const SpecialGalleryCard = ({ item }) => {
+
+const SpecialGalleryCard = ({ item }:{item:{img:StaticImageData}}) => {
     return (
         <div className='cursor-pointer col-span-6 md:col-span-3 relative group' >
             <div>
